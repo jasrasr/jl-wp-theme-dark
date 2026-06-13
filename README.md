@@ -3,7 +3,7 @@
 A custom dark WordPress theme for Jason Lamb sites.
 
 - Website: https://jasonlamb.me
-- GitHub repository for this theme: https://github.com/jasrasr/jl-dark-lab
+- GitHub repository for this theme: https://github.com/jasrasr/jl-wp-theme-dark
 - Git Updater project: https://github.com/afragen/git-updater
 - Git Updater website: https://git-updater.com/
 
@@ -25,7 +25,7 @@ Core identity:
 ## Repository layout
 
 ```text
-jl-dark-lab/
+jl-wp-theme-dark/
 ├── style.css
 ├── functions.php
 ├── header.php
@@ -54,7 +54,7 @@ jl-dark-lab/
 The `style.css` theme header includes this line so Git Updater can identify the GitHub repository:
 
 ```css
-GitHub Theme URI: https://github.com/jasrasr/jl-dark-lab
+GitHub Theme URI: https://github.com/jasrasr/jl-wp-theme-dark
 Primary Branch: main
 ```
 
@@ -93,7 +93,7 @@ Use this if the host gives you SSH access.
 
 ```bash
 cd public_html/wp-content/themes
-git clone https://github.com/jasrasr/jl-dark-lab.git jl-dark-lab
+git clone https://github.com/jasrasr/jl-wp-theme-dark.git jl-dark-lab
 ```
 
 Then activate the theme from WordPress admin.
@@ -117,7 +117,7 @@ https://github.com/afragen/git-updater
 3. In WordPress admin, use Git Updater's install screen to install this theme from:
 
 ```text
-https://github.com/jasrasr/jl-dark-lab
+https://github.com/jasrasr/jl-wp-theme-dark
 ```
 
 4. Confirm the installed folder is:
@@ -189,13 +189,13 @@ Do not ignore `.agents/` if you use it for shared Codex/agent project instructio
 ## Jason Lamb Links
 
 - Website: https://jasonlamb.me
-- GitHub Repository: https://github.com/jasrasr/jl-dark-lab
+- GitHub Repository: https://github.com/jasrasr/jl-wp-theme-dark
 - Git Updater: https://github.com/afragen/git-updater
 
 ## New WordPress Site Implementation
 
 1. Create or confirm the GitHub repository:
-   - https://github.com/jasrasr/jl-dark-lab
+   - https://github.com/jasrasr/jl-wp-theme-dark
 
 2. Install Git Updater on WordPress:
    - Project: https://github.com/afragen/git-updater
@@ -218,21 +218,3 @@ Do not ignore `.agents/` if you use it for shared Codex/agent project instructio
    - Bump the Version header.
    - Commit and push to GitHub.
    - Update from WordPress Admin using Git Updater.
-
-## Git Updater Notes
-
-Git Updater expects the plugin or theme header to point to the repository.
-
-Plugin header example:
-
-``php
-GitHub Plugin URI: https://github.com/jasrasr/jl-content-tools
-Primary Branch: main
-``
-
-Theme header example:
-
-``css
-GitHub Theme URI: https://github.com/jasrasr/jl-dark-lab
-Primary Branch: main
-``
