@@ -147,8 +147,8 @@ git push
 6. Optionally tag the release:
 
 ```bash
-git tag v1.0.6
-git push origin v1.0.6
+git tag v1.0.7
+git push origin v1.0.7
 ```
 
 ## Updating in WordPress admin

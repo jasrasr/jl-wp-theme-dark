@@ -6,6 +6,10 @@ All notable changes to this project should be documented in this file.
 
 - No unreleased changes.
 
+## [1.0.7] - 2026-06-13
+
+- Bumped theme version to `1.0.7` after manual upload of the `1.0.6` files to the live host so Git Updater can detect the next available update.
+
 ## [1.0.6] - 2026-06-13
 
 - Renamed the repository references from `jl-dark-lab` to `jl-wp-theme-dark`.
