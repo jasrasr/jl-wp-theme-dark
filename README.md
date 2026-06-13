@@ -1,4 +1,4 @@
-# JL Dark Lab
+# JL WP Theme Dark
 
 A custom dark WordPress theme for Jason Lamb sites.
 
@@ -6,6 +6,7 @@ A custom dark WordPress theme for Jason Lamb sites.
 - GitHub repository for this theme: https://github.com/jasrasr/jl-wp-theme-dark
 - Git Updater project: https://github.com/afragen/git-updater
 - Git Updater website: https://git-updater.com/
+- Changelog: `CHANGELOG.md`
 
 ## Design direction
 
@@ -71,7 +72,7 @@ Use this for the first install on a new site.
 Appearance -> Themes -> Add New -> Upload Theme
 ```
 
-3. Upload `jl-dark-lab.zip`.
+3. Upload `jl-wp-theme-dark.zip`.
 4. Click **Live Preview** first.
 5. Confirm the homepage, post pages, pages, archives, search, categories, and tags look sane.
 6. Activate the theme.
@@ -93,7 +94,7 @@ Use this if the host gives you SSH access.
 
 ```bash
 cd public_html/wp-content/themes
-git clone https://github.com/jasrasr/jl-wp-theme-dark.git jl-dark-lab
+git clone https://github.com/jasrasr/jl-wp-theme-dark.git jl-wp-theme-dark
 ```
 
 Then activate the theme from WordPress admin.
@@ -101,7 +102,7 @@ Then activate the theme from WordPress admin.
 To update later through SSH:
 
 ```bash
-cd public_html/wp-content/themes/jl-dark-lab
+cd public_html/wp-content/themes/jl-wp-theme-dark
 git pull
 ```
 
@@ -123,7 +124,7 @@ https://github.com/jasrasr/jl-wp-theme-dark
 4. Confirm the installed folder is:
 
 ```text
-wp-content/themes/jl-dark-lab
+wp-content/themes/jl-wp-theme-dark
 ```
 
 5. Preview the theme before activating.
@@ -133,20 +134,38 @@ wp-content/themes/jl-dark-lab
 
 1. Make changes locally.
 2. Bump the `Version:` value in `style.css`.
-3. Update this README if behavior or install steps changed.
-4. Commit and push:
+3. Update `CHANGELOG.md`.
+4. Update this README if behavior or install steps changed.
+5. Commit and push:
 
 ```bash
 git add .
-git commit -m "Update JL Dark Lab theme"
+git commit -m "Update JL WP Theme Dark theme"
 git push
 ```
 
-5. Optionally tag the release:
+6. Optionally tag the release:
 
 ```bash
-git tag v1.0.5
-git push origin v1.0.5
+git tag v1.0.6
+git push origin v1.0.6
+```
+
+## Updating in WordPress admin
+
+After Git Updater is installed and this theme is connected to the GitHub repo, theme updates should appear in the normal WordPress update flow after you push a higher `Version:` in `style.css`.
+
+Check either of these screens:
+
+- `Dashboard -> Updates`
+- `Appearance -> Themes`
+
+If a new version does not appear, confirm the pushed `Version:` is higher than the installed version and that the theme header still includes:
+
+```css
+Theme URI: https://github.com/jasrasr/jl-wp-theme-dark
+GitHub Theme URI: https://github.com/jasrasr/jl-wp-theme-dark
+Primary Branch: main
 ```
 
 ## New-site implementation checklist
@@ -191,30 +210,3 @@ Do not ignore `.agents/` if you use it for shared Codex/agent project instructio
 - Website: https://jasonlamb.me
 - GitHub Repository: https://github.com/jasrasr/jl-wp-theme-dark
 - Git Updater: https://github.com/afragen/git-updater
-
-## New WordPress Site Implementation
-
-1. Create or confirm the GitHub repository:
-   - https://github.com/jasrasr/jl-wp-theme-dark
-
-2. Install Git Updater on WordPress:
-   - Project: https://github.com/afragen/git-updater
-   - Site: https://git-updater.com/
-
-3. Install this Theme:
-   - WordPress Admin -> Plugins or Appearance -> Themes
-   - Or use SSH/Git in the appropriate WordPress folder.
-
-4. Confirm expected install path:
-   - Plugin: /wp-content/plugins/jl-content-tools/
-   - Theme: /wp-content/themes/jl-dark-lab/
-
-5. Activate:
-   - Plugin: WordPress Admin -> Plugins -> JL Content Tools -> Activate
-   - Theme: WordPress Admin -> Appearance -> Themes -> JL Dark Lab -> Activate
-
-6. Future updates:
-   - Edit files locally.
-   - Bump the Version header.
-   - Commit and push to GitHub.
-   - Update from WordPress Admin using Git Updater.

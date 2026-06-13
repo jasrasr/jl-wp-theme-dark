@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme functions for JL Dark Lab.
+ * Theme functions for JL WP Theme Dark.
  */
 
 if (!defined('ABSPATH')) {
@@ -20,23 +20,23 @@ function jl_dark_lab_setup() {
     ]);
 
     register_nav_menus([
-        'primary' => __('Primary Menu', 'jl-dark-lab'),
-        'footer'  => __('Footer Menu', 'jl-dark-lab'),
+        'primary' => __('Primary Menu', 'jl-wp-theme-dark'),
+        'footer'  => __('Footer Menu', 'jl-wp-theme-dark'),
     ]);
 }
 add_action('after_setup_theme', 'jl_dark_lab_setup');
 
 function jl_dark_lab_assets() {
-    wp_enqueue_style('jl-dark-lab-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
-    wp_enqueue_script('jl-dark-lab-script', get_template_directory_uri() . '/assets/js/theme.js', [], wp_get_theme()->get('Version'), true);
+    wp_enqueue_style('jl-wp-theme-dark-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
+    wp_enqueue_script('jl-wp-theme-dark-script', get_template_directory_uri() . '/assets/js/theme.js', [], wp_get_theme()->get('Version'), true);
 }
 add_action('wp_enqueue_scripts', 'jl_dark_lab_assets');
 
 function jl_dark_lab_widgets_init() {
     register_sidebar([
-        'name'          => __('Sidebar', 'jl-dark-lab'),
+        'name'          => __('Sidebar', 'jl-wp-theme-dark'),
         'id'            => 'sidebar-1',
-        'description'   => __('Main sidebar area.', 'jl-dark-lab'),
+        'description'   => __('Main sidebar area.', 'jl-wp-theme-dark'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',
@@ -52,7 +52,7 @@ add_filter('excerpt_more', 'jl_dark_lab_excerpt_more');
 
 function jl_dark_lab_fallback_menu() {
     echo '<ul>';
-    echo '<li><a href="' . esc_url(home_url('/')) . '">' . esc_html__('Home', 'jl-dark-lab') . '</a></li>';
+    echo '<li><a href="' . esc_url(home_url('/')) . '">' . esc_html__('Home', 'jl-wp-theme-dark') . '</a></li>';
     echo '</ul>';
 }
 

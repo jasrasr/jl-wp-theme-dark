@@ -10,11 +10,11 @@ get_header();
     <div class="jl-container jl-layout">
         <section>
             <div class="jl-content-card" style="margin-bottom:22px;">
-                <p class="jl-kicker"><?php esc_html_e('Search', 'jl-dark-lab'); ?></p>
+                <p class="jl-kicker"><?php esc_html_e('Search', 'jl-wp-theme-dark'); ?></p>
                 <h1 class="jl-page-title">
                     <?php
                     printf(
-                        esc_html__('Results for “%s”', 'jl-dark-lab'),
+                        esc_html__('Results for “%s”', 'jl-wp-theme-dark'),
                         esc_html(get_search_query())
                     );
                     ?>
@@ -32,7 +32,7 @@ get_header();
                     </div>
                 <?php else : ?>
                     <article class="jl-content-card">
-                        <h2><?php esc_html_e('No results found', 'jl-dark-lab'); ?></h2>
+                        <h2><?php esc_html_e('No results found', 'jl-wp-theme-dark'); ?></h2>
                         <?php get_search_form(); ?>
                     </article>
                 <?php endif; ?>

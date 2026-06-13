@@ -10,7 +10,7 @@ get_header();
     <div class="jl-container jl-layout">
         <section>
             <div class="jl-content-card" style="margin-bottom:22px;">
-                <p class="jl-kicker"><?php esc_html_e('Archive', 'jl-dark-lab'); ?></p>
+                <p class="jl-kicker"><?php esc_html_e('Archive', 'jl-wp-theme-dark'); ?></p>
                 <h1 class="jl-page-title"><?php the_archive_title(); ?></h1>
                 <div class="jl-excerpt"><?php the_archive_description(); ?></div>
             </div>
@@ -26,7 +26,7 @@ get_header();
                     </div>
                 <?php else : ?>
                     <article class="jl-content-card">
-                        <h2><?php esc_html_e('No posts found', 'jl-dark-lab'); ?></h2>
+                        <h2><?php esc_html_e('No posts found', 'jl-wp-theme-dark'); ?></h2>
                     </article>
                 <?php endif; ?>
             </div>

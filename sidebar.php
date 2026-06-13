@@ -8,14 +8,14 @@
         <?php dynamic_sidebar('sidebar-1'); ?>
     <?php else : ?>
         <section class="widget">
-            <h2 class="widget-title"><?php esc_html_e('Categories', 'jl-dark-lab'); ?></h2>
+            <h2 class="widget-title"><?php esc_html_e('Categories', 'jl-wp-theme-dark'); ?></h2>
             <ul>
                 <?php wp_list_categories(['title_li' => '']); ?>
             </ul>
         </section>
 
         <section class="widget">
-            <h2 class="widget-title"><?php esc_html_e('Recent Posts', 'jl-dark-lab'); ?></h2>
+            <h2 class="widget-title"><?php esc_html_e('Recent Posts', 'jl-wp-theme-dark'); ?></h2>
             <ul>
                 <?php
                 wp_get_archives([

@@ -31,7 +31,7 @@
             </span>
         </a>
 
-        <nav class="jl-nav" aria-label="<?php esc_attr_e('Primary menu', 'jl-dark-lab'); ?>">
+        <nav class="jl-nav" aria-label="<?php esc_attr_e('Primary menu', 'jl-wp-theme-dark'); ?>">
             <?php
             wp_nav_menu([
                 'theme_location' => 'primary',

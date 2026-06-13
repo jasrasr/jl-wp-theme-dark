@@ -31,7 +31,7 @@ $has_thumb = has_post_thumbnail();
 
         <div class="jl-read-more">
             <a class="jl-button" href="<?php the_permalink(); ?>">
-                <?php esc_html_e('Read more', 'jl-dark-lab'); ?>
+                <?php esc_html_e('Read more', 'jl-wp-theme-dark'); ?>
             </a>
         </div>
     </div>

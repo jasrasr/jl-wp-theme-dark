@@ -15,7 +15,7 @@ get_header();
                     <h1 class="jl-page-title"><?php the_title(); ?></h1>
 
                     <div class="jl-meta">
-                        <?php esc_html_e('Filed under ', 'jl-dark-lab'); ?><?php the_category(', '); ?>
+                        <?php esc_html_e('Filed under ', 'jl-wp-theme-dark'); ?><?php the_category(', '); ?>
                     </div>
 
                     <?php if (has_post_thumbnail()) : ?>

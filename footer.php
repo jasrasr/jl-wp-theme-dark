@@ -10,7 +10,7 @@
             <span>All rights reserved.</span>
         </div>
 
-        <nav aria-label="<?php esc_attr_e('Footer menu', 'jl-dark-lab'); ?>">
+        <nav aria-label="<?php esc_attr_e('Footer menu', 'jl-wp-theme-dark'); ?>">
             <?php
             wp_nav_menu([
                 'theme_location' => 'footer',

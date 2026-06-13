@@ -22,7 +22,7 @@ $is_home_view = is_home() || is_front_page();
                         I like useful tech, weird little projects, readable scripts, and the occasional Comic Sans crime scene.
                     </div>
 
-                    <div class="jl-interest-cloud" aria-label="<?php esc_attr_e('Jason interest tags', 'jl-dark-lab'); ?>">
+                    <div class="jl-interest-cloud" aria-label="<?php esc_attr_e('Jason interest tags', 'jl-wp-theme-dark'); ?>">
                         <span>#HelpingPeople</span>
                         <span>#PowerShell</span>
                         <span>#GitHub</span>
@@ -49,7 +49,7 @@ $is_home_view = is_home() || is_front_page();
                 </aside>
             </div>
 
-            <div class="jl-lane-grid" aria-label="<?php esc_attr_e('Content lanes', 'jl-dark-lab'); ?>">
+            <div class="jl-lane-grid" aria-label="<?php esc_attr_e('Content lanes', 'jl-wp-theme-dark'); ?>">
                 <section class="jl-lane-card feature-help"><div class="jl-lane-icon">?</div><h2>Helping Humans</h2><p>Plain-English tech help, practical fixes, and notes written for actual people.</p></section>
                 <section class="jl-lane-card feature-powershell"><div class="jl-lane-icon">PS</div><h2>PowerShell</h2><p>Scripts, admin shortcuts, automation patterns, and command-line sanity.</p></section>
                 <section class="jl-lane-card feature-github"><div class="jl-lane-icon">GH</div><h2>GitHub Builds</h2><p>Repo-backed tools, project writeups, changelogs, and deployment notes.</p></section>
@@ -76,7 +76,13 @@ $is_home_view = is_home() || is_front_page();
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <article id="post-<?php the_ID(); ?>" <?php post_class('jl-home-note'); ?>>
-                                <div class="jl-note-date"><strong><?php echo esc_html(get_the_date('d')); ?></strong><?php echo esc_html(get_the_date('M Y')); ?></div>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <a class="jl-note-media" href="<?php the_permalink(); ?>" aria-label="<?php the_title_attribute(); ?>">
+                                        <?php the_post_thumbnail('medium_large'); ?>
+                                    </a>
+                                <?php else : ?>
+                                    <div class="jl-note-date"><strong><?php echo esc_html(get_the_date('d')); ?></strong><?php echo esc_html(get_the_date('M Y')); ?></div>
+                                <?php endif; ?>
                                 <div>
                                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     <p><?php echo esc_html(wp_trim_words(get_the_excerpt(), 28)); ?></p>
@@ -86,7 +92,7 @@ $is_home_view = is_home() || is_front_page();
                         <?php endwhile; ?>
                         <div class="jl-pagination"><?php the_posts_pagination(); ?></div>
                     <?php else : ?>
-                        <article class="jl-content-card"><h2><?php esc_html_e('Nothing found', 'jl-dark-lab'); ?></h2><p><?php esc_html_e('No posts matched this request.', 'jl-dark-lab'); ?></p></article>
+                        <article class="jl-content-card"><h2><?php esc_html_e('Nothing found', 'jl-wp-theme-dark'); ?></h2><p><?php esc_html_e('No posts matched this request.', 'jl-wp-theme-dark'); ?></p></article>
                     <?php endif; ?>
                 </section>
 
@@ -110,7 +116,7 @@ $is_home_view = is_home() || is_front_page();
                     <?php while (have_posts()) : the_post(); ?><?php get_template_part('template-parts/content', 'card'); ?><?php endwhile; ?>
                     <div class="jl-pagination"><?php the_posts_pagination(); ?></div>
                 <?php else : ?>
-                    <article class="jl-content-card"><h1><?php esc_html_e('Nothing found', 'jl-dark-lab'); ?></h1><p><?php esc_html_e('No posts matched this request.', 'jl-dark-lab'); ?></p></article>
+                    <article class="jl-content-card"><h1><?php esc_html_e('Nothing found', 'jl-wp-theme-dark'); ?></h1><p><?php esc_html_e('No posts matched this request.', 'jl-wp-theme-dark'); ?></p></article>
                 <?php endif; ?>
             </section>
             <?php get_sidebar(); ?>
