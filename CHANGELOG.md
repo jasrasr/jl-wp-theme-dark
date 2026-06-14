@@ -6,6 +6,10 @@ All notable changes to this project should be documented in this file.
 
 - No unreleased changes.
 
+## [1.0.8] - 2026-06-13
+
+- Bumped theme version to `1.0.8` to test whether Git Updater recognizes a newer GitHub release after the live site was manually aligned to `1.0.7`.
+
 ## [1.0.7] - 2026-06-13
 
 - Bumped theme version to `1.0.7` after manual upload of the `1.0.6` files to the live host so Git Updater can detect the next available update.
