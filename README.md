@@ -168,6 +168,12 @@ GitHub Theme URI: https://github.com/jasrasr/jl-wp-theme-dark
 Primary Branch: main
 ```
 
+## Follow-up checks
+
+- Revisit Git Updater detection after cache refresh with live theme version `1.0.7` and repo version `1.0.8`.
+- Confirm whether the update appears in `Dashboard -> Updates` and/or `Appearance -> Themes`.
+- Test auto-update behavior only after manual update detection is confirmed working.
+
 ## New-site implementation checklist
 
 Before activating on a new WordPress site:

@@ -4,7 +4,8 @@ All notable changes to this project should be documented in this file.
 
 ## [Unreleased]
 
-- No unreleased changes.
+- Follow-up needed: verify Git Updater detects the `1.0.8` update from a live site currently aligned to `1.0.7`.
+- Auto-update behavior still needs explicit testing after normal update detection is confirmed.
 
 ## [1.0.8] - 2026-06-13
 
