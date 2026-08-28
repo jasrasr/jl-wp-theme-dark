@@ -4,8 +4,18 @@ All notable changes to this project should be documented in this file.
 
 ## [Unreleased]
 
-- Follow-up needed: verify Git Updater detects the `1.0.8` update from a live site currently aligned to `1.0.7`.
+- Follow-up needed: bump the `style.css` theme header version if Git Updater does not detect this CSS-only mobile polish update from commit changes alone.
 - Auto-update behavior still needs explicit testing after normal update detection is confirmed.
+
+## [1.0.9] - 2026-08-28
+
+- Added `assets/css/mobile-polish.css` for mobile readability and shorter pre-post scrolling.
+- Changed the hero quote/note block away from the hard-to-read Comic Sans accent font to a readable system font.
+- Reduced mobile hero padding, card padding, and command-panel spacing.
+- Compacted the mobile interest tags, command status grid, and content lanes.
+- Hid the personality card and project console on small mobile screens so the first post appears sooner.
+- Fixed the `Latest Notes` section heading on mobile so the heading and description stack cleanly.
+- Adjusted mobile post card image ratio and title/body sizing.
 
 ## [1.0.8] - 2026-06-13
 
