@@ -28,6 +28,7 @@ add_action('after_setup_theme', 'jl_dark_lab_setup');
 
 function jl_dark_lab_assets() {
     wp_enqueue_style('jl-wp-theme-dark-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
+    wp_enqueue_style('jl-wp-theme-dark-mobile-polish', get_template_directory_uri() . '/assets/css/mobile-polish.css', ['jl-wp-theme-dark-style'], '1.0.9');
     wp_enqueue_script('jl-wp-theme-dark-script', get_template_directory_uri() . '/assets/js/theme.js', [], wp_get_theme()->get('Version'), true);
 }
 add_action('wp_enqueue_scripts', 'jl_dark_lab_assets');
