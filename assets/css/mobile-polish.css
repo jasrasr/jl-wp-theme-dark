@@ -1,0 +1,233 @@
+/*
+ * JL WP Theme Dark - Mobile readability and scroll polish
+ * Version: 1.0.9
+ * Purpose: Improve mobile readability and reduce the distance to the first post.
+ */
+
+/* Make the quote box readable. Keep the warm note style, remove the hard-to-read Comic Sans body copy. */
+.jl-human-note {
+    font-family: var(--jl-font-readable, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif) !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-style: normal;
+}
+
+/* Keep the fun font for tiny accents only. */
+.jl-interest-cloud span:nth-child(2n),
+.jl-project-console::before {
+    font-family: var(--jl-font-type, "Cascadia Code", "Courier Prime", "Courier New", Consolas, monospace);
+}
+
+@media (max-width: 700px) {
+    .jl-container {
+        width: min(var(--jl-max), calc(100% - 20px));
+    }
+
+    .jl-site-header {
+        position: static;
+    }
+
+    .jl-header-inner {
+        min-height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .jl-brand-mark,
+    .jl-logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .jl-brand-text strong {
+        font-size: 1rem;
+    }
+
+    .jl-brand-text span {
+        font-size: 0.76rem;
+    }
+
+    .jl-nav a {
+        padding: 5px 7px;
+        font-size: 0.78rem;
+    }
+
+    .jl-hero {
+        padding: 18px 0 14px;
+    }
+
+    .jl-identity-grid {
+        margin-top: 10px;
+        gap: 12px;
+    }
+
+    .jl-hero-card,
+    .jl-command-panel,
+    .jl-personality-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .jl-kicker {
+        font-size: 0.66rem;
+        margin-bottom: 8px;
+        letter-spacing: 0.13em;
+    }
+
+    .jl-hero h1,
+    .jl-page-title {
+        font-size: clamp(1.65rem, 8.5vw, 2.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+    }
+
+    .jl-hero p,
+    .jl-hero-subline {
+        font-size: 0.9rem;
+        line-height: 1.45;
+        margin-top: 10px;
+    }
+
+    .jl-human-note {
+        margin-top: 12px;
+        padding: 11px 12px;
+        font-size: 0.92rem;
+        line-height: 1.45;
+    }
+
+    .jl-interest-cloud {
+        margin-top: 12px;
+        gap: 6px;
+    }
+
+    .jl-interest-cloud span,
+    .jl-interest-cloud a {
+        padding: 5px 8px;
+        font-size: 0.72rem;
+    }
+
+    .jl-terminal-strip {
+        margin-top: 12px;
+        padding: 10px;
+        font-size: 0.72rem;
+        line-height: 1.4;
+    }
+
+    .jl-command-panel h2,
+    .jl-personality-card h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .jl-search-form input[type="search"] {
+        padding: 8px 9px;
+        font-size: 0.8rem;
+    }
+
+    .jl-search-form button {
+        padding: 8px 10px;
+        font-size: 0.78rem;
+    }
+
+    .jl-status-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+        margin-top: 12px;
+    }
+
+    .jl-status-row {
+        display: block;
+        padding: 8px;
+        font-size: 0.72rem;
+        line-height: 1.25;
+    }
+
+    .jl-status-row span:first-child,
+    .jl-status-row span:last-child {
+        display: block;
+    }
+
+    .jl-lane-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin: 12px 0;
+    }
+
+    .jl-lane-card {
+        min-height: auto;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .jl-lane-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+        margin-bottom: 7px;
+        font-size: 0.75rem;
+    }
+
+    .jl-lane-card h2 {
+        font-size: 0.9rem;
+        line-height: 1.15;
+        margin-bottom: 0;
+    }
+
+    .jl-lane-card p {
+        display: none;
+    }
+
+    /* The personality card is useful on desktop but creates too much mobile pre-post scrolling. */
+    .jl-personality-card {
+        display: none;
+    }
+
+    .jl-section-heading {
+        display: block;
+        margin: 18px 0 12px;
+    }
+
+    .jl-section-heading h2 {
+        font-size: 1.55rem;
+        line-height: 1.05;
+        margin-bottom: 6px;
+    }
+
+    .jl-section-heading p {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        max-width: none;
+    }
+
+    .jl-home-bottom {
+        gap: 14px;
+    }
+
+    .jl-home-note {
+        padding: 12px;
+        gap: 10px;
+        border-radius: 15px;
+    }
+
+    .jl-note-media {
+        aspect-ratio: 16 / 9;
+        min-height: 0;
+    }
+
+    .jl-home-note h3 {
+        font-size: 1.05rem;
+        line-height: 1.18;
+    }
+
+    .jl-home-note p,
+    .jl-home-note .jl-meta,
+    .jl-home-note .jl-meta a {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+
+    .jl-project-console {
+        display: none;
+    }
+}
