@@ -4,10 +4,18 @@ All notable changes to this project should be documented in this file.
 
 ## [Unreleased]
 
-- Follow-up needed: bump the `style.css` theme header version if Git Updater does not detect this CSS-only mobile polish update from commit changes alone.
-- Auto-update behavior still needs explicit testing after normal update detection is confirmed.
+- Optional follow-up: explicitly test Git Updater auto-update behavior only if theme auto-updates will be used. To complete this, enable theme auto-updates, publish a future version bump, and confirm WordPress updates the theme without manually clicking update. If manual Git Updater updates are acceptable, remove this item.
 
-## [1.0.9] - 2026-08-28
+## [1.0.9] - 2026-10-01
+
+- Bumped the `style.css` theme header version from `1.0.8` to `1.0.9` so Git Updater can detect the update.
+- Updated single post pages to show the WordPress post author near the title and date.
+- Updated the footer text to `© 2026 JasonLamb.ME - All rights reserved.` using the current site year dynamically.
+- Kept the mobile polish stylesheet active and aligned it with the `1.0.9` release.
+- Reworked the accumulated base stylesheet into a cleaner readable version while preserving the dark terminal-style theme direction.
+- Resolved the previous unreleased note about needing a `style.css` version bump for CSS-only/mobile-polish changes.
+
+## [1.0.9-mobile-polish] - 2026-08-28
 
 - Added `assets/css/mobile-polish.css` for mobile readability and shorter pre-post scrolling.
 - Changed the hero quote/note block away from the hard-to-read Comic Sans accent font to a readable system font.
