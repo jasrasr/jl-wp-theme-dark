@@ -14,8 +14,21 @@ get_header();
                     <p class="jl-kicker"><?php echo esc_html(get_the_date()); ?></p>
                     <h1 class="jl-page-title"><?php the_title(); ?></h1>
 
-                    <div class="jl-meta">
-                        <?php esc_html_e('Filed under ', 'jl-wp-theme-dark'); ?><?php the_category(', '); ?>
+                    <div class="jl-meta jl-single-meta">
+                        <span class="jl-post-author">
+                            <?php esc_html_e('By ', 'jl-wp-theme-dark'); ?>
+                            <a href="<?php echo esc_url(get_author_posts_url((int) get_the_author_meta('ID'))); ?>">
+                                <?php echo esc_html(get_the_author()); ?>
+                            </a>
+                        </span>
+                        <span aria-hidden="true"> / </span>
+                        <time datetime="<?php echo esc_attr(get_the_date(DATE_W3C)); ?>">
+                            <?php echo esc_html(get_the_date()); ?>
+                        </time>
+                        <span aria-hidden="true"> / </span>
+                        <span>
+                            <?php esc_html_e('Filed under ', 'jl-wp-theme-dark'); ?><?php the_category(', '); ?>
+                        </span>
                     </div>
 
                     <?php if (has_post_thumbnail()) : ?>
