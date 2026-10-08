@@ -7,7 +7,7 @@
  * GitHub Theme URI: https://github.com/jasrasr/jl-wp-theme-dark
  * Update URI: https://github.com/jasrasr/jl-wp-theme-dark
  * Description: A custom dark WordPress theme for Jason Lamb .ME. Built for posts, excerpts, categories, tags, and personal tech writing.
- * Version: 1.0.10
+ * Version: 1.0.11
  * Requires at least: 6.0
  * Tested up to: 6.5
  * Requires PHP: 7.4
@@ -677,13 +677,13 @@ img {
 }
 
 .jl-tax-label {
-    margin: 0 0 10px;
-    color: var(--jl-text);
+    margin: 0 0 8px;
+    color: var(--jl-muted);
     font-family: var(--jl-font-readable, system-ui, sans-serif);
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     font-weight: 700;
     line-height: 1.35;
-    letter-spacing: 0;
+    letter-spacing: 0.04em;
 }
 
 .jl-tax-items {
@@ -702,7 +702,7 @@ img {
     background: rgba(255,255,255,0.07);
     color: var(--jl-accent);
     font-family: var(--jl-font-readable, system-ui, sans-serif);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.35;
     text-decoration: none;
 }
