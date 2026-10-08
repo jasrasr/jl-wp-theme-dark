@@ -7,7 +7,7 @@
  * GitHub Theme URI: https://github.com/jasrasr/jl-wp-theme-dark
  * Update URI: https://github.com/jasrasr/jl-wp-theme-dark
  * Description: A custom dark WordPress theme for Jason Lamb .ME. Built for posts, excerpts, categories, tags, and personal tech writing.
- * Version: 1.0.9
+ * Version: 1.0.10
  * Requires at least: 6.0
  * Tested up to: 6.5
  * Requires PHP: 7.4
@@ -664,19 +664,54 @@ img {
 }
 
 .jl-tax-links {
+    display: grid;
+    gap: 18px;
     margin-top: 26px;
-    padding-top: 18px;
+    padding-top: 22px;
     border-top: 1px solid var(--jl-line);
     color: var(--jl-muted);
 }
 
-.jl-tax-links a {
+.jl-tax-group {
+    min-width: 0;
+}
+
+.jl-tax-label {
+    margin: 0 0 10px;
+    color: var(--jl-text);
+    font-family: var(--jl-font-readable, system-ui, sans-serif);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0;
+}
+
+.jl-tax-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.jl-tax-items a {
     display: inline-block;
-    margin: 4px 4px 4px 0;
-    padding: 4px 10px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    padding: 7px 12px;
+    border: 1px solid var(--jl-line);
     border-radius: 999px;
     background: rgba(255,255,255,0.07);
+    color: var(--jl-accent);
+    font-family: var(--jl-font-readable, system-ui, sans-serif);
+    font-size: 0.9rem;
+    line-height: 1.35;
     text-decoration: none;
+}
+
+.jl-tax-items a:hover,
+.jl-tax-items a:focus-visible {
+    background: rgba(88,166,255,0.14);
+    border-color: var(--jl-accent);
+    color: var(--jl-text);
 }
 
 .jl-section-heading {
