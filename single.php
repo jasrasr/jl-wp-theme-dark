@@ -41,10 +41,27 @@ get_header();
                         <?php the_content(); ?>
                     </div>
 
-                    <div class="jl-tax-links">
-                        <div><?php the_category(' '); ?></div>
-                        <div><?php the_tags('', ' ', ''); ?></div>
-                    </div>
+                    <?php
+                    $jl_category_links = get_the_category_list(' ');
+                    $jl_tag_links = get_the_tag_list('', ' ', '');
+                    ?>
+                    <?php if ($jl_category_links || $jl_tag_links) : ?>
+                        <div class="jl-tax-links" aria-label="<?php esc_attr_e('Post topics', 'jl-wp-theme-dark'); ?>">
+                            <?php if ($jl_category_links) : ?>
+                                <section class="jl-tax-group">
+                                    <h2 class="jl-tax-label"><?php esc_html_e('Categories', 'jl-wp-theme-dark'); ?></h2>
+                                    <div class="jl-tax-items"><?php echo wp_kses_post($jl_category_links); ?></div>
+                                </section>
+                            <?php endif; ?>
+
+                            <?php if ($jl_tag_links) : ?>
+                                <section class="jl-tax-group">
+                                    <h2 class="jl-tax-label"><?php esc_html_e('Tags', 'jl-wp-theme-dark'); ?></h2>
+                                    <div class="jl-tax-items"><?php echo wp_kses_post($jl_tag_links); ?></div>
+                                </section>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
                 </article>
             <?php endwhile; ?>
         </section>
