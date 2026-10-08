@@ -6,6 +6,11 @@ All notable changes to this project should be documented in this file.
 
 - Optional follow-up: explicitly test Git Updater auto-update behavior only if theme auto-updates will be used. To complete this, enable theme auto-updates, publish a future version bump, and confirm WordPress updates the theme without manually clicking update. If manual Git Updater updates are acceptable, remove this item.
 
+## [1.0.12] - 2026-10-08
+
+- Tightened vertical spacing between the Categories and Tags groups, their labels, and linked terms; reduced chip padding and inter-chip gaps on single posts.
+- Bumped theme version to 1.0.12 for Git Updater detection.
+
 ## [1.0.11] - 2026-10-08
 
 - Reduced Categories and Tags heading labels to 0.75rem with muted text and made linked category/tag chips 0.95rem so the actual terms are more prominent.
