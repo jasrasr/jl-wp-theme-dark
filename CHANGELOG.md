@@ -6,6 +6,12 @@ All notable changes to this project should be documented in this file.
 
 - Optional follow-up: explicitly test Git Updater auto-update behavior only if theme auto-updates will be used. To complete this, enable theme auto-updates, publish a future version bump, and confirm WordPress updates the theme without manually clicking update. If manual Git Updater updates are acceptable, remove this item.
 
+## [1.0.10] - 2026-10-08
+
+- Labeled the Categories and Tags sections at the bottom of single post pages, showing each only when terms are assigned.
+- Improved tag/category chip readability, spacing, contrast, and mobile wrapping.
+- Bumped the theme version to 1.0.10 for Git Updater detection.
+
 ## [1.0.9] - 2026-10-01
 
 - Bumped the `style.css` theme header version from `1.0.8` to `1.0.9` so Git Updater can detect the update.
